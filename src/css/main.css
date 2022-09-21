@@ -1,0 +1,194 @@
+/* TopBannerSlider 영역 */
+.slick-slider {
+  margin-top: 50px;
+  padding-top: 25px;
+  width: 100%;
+}
+
+.slick-list {
+  width: 1060px;
+  margin: 0 auto;
+  overflow: visible;
+}
+
+.slick-slide {
+  padding: 0 10px;
+}
+
+.slick-list img {
+  border-radius: 5px;
+  max-width: 100%;
+}
+
+/* line-banner 영역 */
+.line-banner {
+  margin: 60px auto;
+  text-align: center;
+}
+
+.line-banner a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(
+    90deg,
+    #01a9fe -12%,
+    #2f5fef 37%,
+    #046afe 72%,
+    #00d2dd 110%
+  );
+  border-radius: 38.5px;
+  max-width: 1060px;
+  margin: auto auto;
+  padding: 21px 30px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.line-banner svg {
+  width: 28px;
+  height: 28px;
+  margin-right: 15px;
+}
+
+/* matching article */
+.matching {
+  background-color: rgb(245, 248, 251);
+  padding-bottom: 60px;
+  text-align: center;
+}
+
+.matching-header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 60px 0 40px;
+}
+
+.matching-header .wanted-logo1 {
+  width: 80px;
+  height: 80px;
+}
+
+.matching-header .wanted-logo2 {
+  width: 170px;
+}
+
+.matching .matching-content {
+  text-align: center;
+}
+
+.matching .matching-content h2 {
+  margin-bottom: 6px;
+  font-size: 22px;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 6px;
+}
+
+.matching .matching-content h2 img {
+  width: 114px;
+  margin-right: 3px;
+}
+
+.matching .matching-content h3 {
+  color: #555;
+  font-size: 16px;
+}
+
+.matching button {
+  padding: 10px 20px;
+  border-radius: 25px;
+  line-height: 22px;
+  background-color: #36f;
+  font-size: 16px;
+  font-weight: 700;
+  color: #fefefe;
+  margin: 20px auto 0 auto;
+}
+
+/* careerBanner */
+.careerBanner {
+  height: 150px;
+  background: linear-gradient(90deg, #ddebff -0.28%, #b7d8ff);
+  margin: 20px 0 60px;
+}
+
+.careerBanner .careerBanner__container {
+  width: 90%;
+  height: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 auto;
+  max-width: 1060px;
+  color: #5071dc;
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 29px;
+  overflow-y: hidden;
+}
+
+.careerBanner .careerBanner__container .careerBanner__content button {
+  border-radius: 25px;
+  background-color: #5071dc;
+  color: #fff;
+  margin-top: 10px;
+  height: 36px;
+  font-size: 14px;
+  width: 119px;
+  font-weight: 700;
+  line-height: 16px;
+}
+
+.careerBanner .careerBanner__container img {
+  width: 236px;
+  height: 169px;
+}
+
+/* shortcut__container */
+.shortcut__container {
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 60px 0 85px;
+}
+
+.shortcut__container ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.shortcut__container ul li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  flex: 1 0;
+}
+
+.shortcut__container ul li:first-child {
+  background-color: #f2f5ff;
+  border-top-left-radius: 38.5px;
+  border-bottom-left-radius: 38.5px;
+  border-left: none;
+}
+
+.shortcut__container ul li:last-child {
+  background-color: #f2fbf5;
+  border-top-right-radius: 38.5px;
+  border-bottom-right-radius: 38.5px;
+}
+
+.shortcut__container ul li button {
+  display: flex;
+  align-items: center;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.shortcut__container ul li button svg {
+  margin-right: 12px;
+  margin-bottom: 4px;
+}

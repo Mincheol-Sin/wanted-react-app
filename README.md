@@ -1,6 +1,6 @@
-# Getting Started with Create React App
+# 원티드(wanted)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+국내기업 '원티드(wanted)'를 클론코딩 하였습니다.
 
 ## Available Scripts
 
