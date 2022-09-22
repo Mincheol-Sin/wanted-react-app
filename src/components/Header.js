@@ -1,6 +1,6 @@
-import "../css/header.css";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
+import { FaSistrix } from "react-icons/fa";
 
 const Header = () => {
   return (
@@ -35,7 +35,9 @@ const Header = () => {
         </MainNav>
         <Aside>
           <li>
-            <SearchBtn />
+            <SearchBtn>
+              <FaSistrix size="20" />
+            </SearchBtn>
           </li>
           <li>
             <SignUpBtn>회원가입/로그인</SignUpBtn>
@@ -118,6 +120,7 @@ const SearchBtn = styled.button`
 `;
 
 const Dashboard = styled(Link)`
+  display: flex;
   font-size: 13px;
   border: 1px solid #e1e2e3;
   border-radius: 15px;
@@ -127,7 +130,21 @@ const Dashboard = styled(Link)`
   padding: 0 10px;
   margin-left: 15px;
   font-weight: 400;
+
+  &::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #e1e2e3;
+    margin: auto 10px;
+  }
 `;
+
+// .header-nav .header-nav__subNav svg {
+//   margin-top: 5px;
+//   width: 18px;
+//   height: 18px; }
 
 const SignUpBtn = styled.button``;
 export default Header;
