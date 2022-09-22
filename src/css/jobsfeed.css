@@ -1,18 +1,8 @@
-/* TopBannerSlider 영역 */
-.slick-slider {
-  margin-top: 50px;
-  padding-top: 25px;
-  width: 100%;
-}
-
+/* 슬라이드 공통 css */
 .slick-list {
   width: 1060px;
   margin: 0 auto;
   overflow: visible;
-}
-
-.slick-slide {
-  padding: 0 10px;
 }
 
 .slick-list img {
@@ -20,13 +10,13 @@
   max-width: 100%;
 }
 
-/* line-banner 영역 */
-.line-banner {
+/* lineBanner 영역 */
+.lineBanner {
   margin: 60px auto;
   text-align: center;
 }
 
-.line-banner a {
+.lineBanner a {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -46,7 +36,7 @@
   color: #fff;
 }
 
-.line-banner svg {
+.lineBanner svg {
   width: 28px;
   height: 28px;
   margin-right: 15px;
@@ -147,20 +137,20 @@
   height: 169px;
 }
 
-/* shortcut__container */
-.shortcut__container {
+/* shortcut-container */
+.shortcut-container {
   width: 90%;
   max-width: 1060px;
   margin: 0 auto;
   padding: 60px 0 85px;
 }
 
-.shortcut__container ul {
+.shortcut-container ul {
   display: flex;
   justify-content: space-around;
 }
 
-.shortcut__container ul li {
+.shortcut-container ul li {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -168,27 +158,47 @@
   flex: 1 0;
 }
 
-.shortcut__container ul li:first-child {
+.shortcut-container ul li:first-child {
   background-color: #f2f5ff;
   border-top-left-radius: 38.5px;
   border-bottom-left-radius: 38.5px;
   border-left: none;
 }
 
-.shortcut__container ul li:last-child {
+.shortcut-container ul li:last-child {
   background-color: #f2fbf5;
   border-top-right-radius: 38.5px;
   border-bottom-right-radius: 38.5px;
 }
 
-.shortcut__container ul li button {
+.shortcut-container ul li button {
   display: flex;
   align-items: center;
   font-size: 18px;
   font-weight: 500;
 }
 
-.shortcut__container ul li button svg {
+.shortcut-container ul li button svg {
   margin-right: 12px;
   margin-bottom: 4px;
+}
+
+/* companyIntroduce */
+.themeBanner {
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1060px;
+  text-align: center;
+}
+
+.second-swiper {
+  margin-top: 20px;
+}
+
+.divider {
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+  height: 1px;
+  background-color: #ececec;
 }

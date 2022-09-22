@@ -26,15 +26,20 @@
 
 html,
 body {
+  background-color: #fff;
+  font-size: 14px;
+  line-height: 1.42857143;
   height: 100%;
   color: #333;
   overflow-x: hidden;
 }
 
 button {
+  font-family: inherit;
   background: none;
-  border: 0;
+  border: none;
   cursor: pointer;
+  display: block;
 }
 
 a {
@@ -46,6 +51,3 @@ table {
   border-spacing: 0;
 }
 
-.flex {
-  display: flex;
-}

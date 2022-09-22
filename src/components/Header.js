@@ -1,74 +1,133 @@
 import "../css/header.css";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
 
 const Header = () => {
   return (
-    <div className="header">
-      <div className="header-nav">
-        <div className="header-nav__left flex">
-          <button>
-            <img src="imgs/menu-btn.webp" className="menu-btn-img" />
-          </button>
-          <Link to="/" className="header-logo">
-            <img src="imgs/wanted-logo.png" />
-          </Link>
-        </div>
-        <ul className="header-nav__mainNav">
+    <HeaderBar>
+      <HeaderContainer>
+        <SubNav>
+          <MenuBtn />
+          <MainLogo to="/" />
+        </SubNav>
+        <MainNav>
           <li>
-            <Link to="/">채용</Link>
+            <NavLink to="/jobsfeed">채용</NavLink>
           </li>
           <li>
-            <Link to="/">이벤트</Link>
+            <NavLink to="/">이벤트</NavLink>
           </li>
           <li>
-            <Link to="/">직군별 연봉</Link>
+            <NavLink to="/">직군별 연봉</NavLink>
           </li>
           <li>
-            <Link to="/">이력서</Link>
+            <NavLink to="/">이력서</NavLink>
           </li>
           <li>
-            <Link to="/">커뮤니티</Link>
+            <NavLink to="/">커뮤니티</NavLink>
           </li>
           <li>
-            <Link to="/">프리랜서</Link>
+            <NavLink to="/">프리랜서</NavLink>
           </li>
           <li>
-            <Link to="/">AI 합격예측</Link>
+            <NavLink to="/">AI 합격예측</NavLink>
           </li>
-        </ul>
-        <ul className="header-nav__subNav">
+        </MainNav>
+        <Aside>
           <li>
-            <button type="button" className="search-btn">
-              <svg
-                className="w-6 h-6"
-                fill="none"
-                stroke="currentColor"
-                viewBox="0 0 24 24"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
-                ></path>
-              </svg>
-            </button>
+            <SearchBtn />
           </li>
           <li>
-            <button type="button" className="signUp-btn">
-              회원가입/로그인
-            </button>
+            <SignUpBtn>회원가입/로그인</SignUpBtn>
           </li>
           <li>
-            <Link to="/" className="dashboard">
+            <Dashboard to="/" className="dashboard">
               기업 서비스
-            </Link>
+            </Dashboard>
           </li>
-        </ul>
-      </div>
-    </div>
+        </Aside>
+      </HeaderContainer>
+    </HeaderBar>
   );
 };
 
+const HeaderBar = styled.div`
+  width: 100%;
+  position: fixed;
+  top: 0;
+  border-bottom: 1px solid #e1e2e3;
+  z-index: 999;
+  background-color: #fff;
+`;
+
+const HeaderContainer = styled.div`
+  width: 90%;
+  max-width: 1060px;
+  height: 50px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+  font-weight: 600;
+`;
+
+const SubNav = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const MenuBtn = styled.button`
+  width: 17px;
+  height: 14px;
+  margin-right: 12px;
+  margin-top: 1px;
+  background-image: url("/imgs/menu-btn.webp");
+  background-size: cover;
+`;
+
+const MainLogo = styled(Link)`
+  width: 84px;
+  height: 25px;
+  margin-bottom: 3px;
+  background-image: url("/imgs/mainLogo.png");
+  background-size: cover;
+`;
+
+const MainNav = styled.ul`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+`;
+
+const NavLink = styled(Link)`
+  padding: 15px;
+  font-weight: 600;
+`;
+
+const Aside = styled.ul`
+  display: flex;
+  align-items: center;
+`;
+
+const SearchBtn = styled.button`
+  padding: 0 10px;
+  margin-top: 5px;
+  width: 18px;
+  height: 18px;
+`;
+
+const Dashboard = styled(Link)`
+  font-size: 13px;
+  border: 1px solid #e1e2e3;
+  border-radius: 15px;
+  height: 30px;
+  line-height: 30px;
+  color: #666;
+  padding: 0 10px;
+  margin-left: 15px;
+  font-weight: 400;
+`;
+
+const SignUpBtn = styled.button``;
 export default Header;

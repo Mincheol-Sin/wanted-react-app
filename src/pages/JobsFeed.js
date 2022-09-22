@@ -1,12 +1,13 @@
-import TopBannerSlider from "../components/TopBannerSlider";
+import TopBanner from "../components/TopBannerSlider";
+import CompanyIntroduce from "../components/CompanyIntroduce";
 import { Link } from "react-router-dom";
-import "../css/main.css";
+import "../css/jobsfeed.css";
 
-const Main = () => {
+const JobsFeed = () => {
   return (
     <>
-      <TopBannerSlider />
-      <div class="line-banner">
+      <TopBanner />
+      <div class="lineBanner">
         <Link to="/">
           <svg
             class="w-6 h-6"
@@ -54,7 +55,7 @@ const Main = () => {
           <img src="https://static.wanted.co.kr/career_connect/banner.png" />
         </div>
       </article>
-      <nav class="shortcut__container">
+      <nav class="shortcut-container">
         <ul>
           <li>
             <button type="button">
@@ -92,8 +93,9 @@ const Main = () => {
           </li>
         </ul>
       </nav>
+      <CompanyIntroduce />
     </>
   );
 };
 
-export default Main;
+export default JobsFeed;
