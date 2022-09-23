@@ -17,48 +17,6 @@
   width: 100%;
 }
 
-/* matching article */
-
-
-/* careerBanner */
-.careerBanner {
-  height: 150px;
-  background: linear-gradient(90deg, #ddebff -0.28%, #b7d8ff);
-  margin: 20px 0 60px;
-}
-
-.careerBanner .careerBanner__container {
-  width: 90%;
-  height: inherit;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  margin: 0 auto;
-  max-width: 1060px;
-  color: #5071dc;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  overflow-y: hidden;
-}
-
-.careerBanner .careerBanner__container .careerBanner__content button {
-  border-radius: 25px;
-  background-color: #5071dc;
-  color: #fff;
-  margin-top: 10px;
-  height: 36px;
-  font-size: 14px;
-  width: 119px;
-  font-weight: 700;
-  line-height: 16px;
-}
-
-.careerBanner .careerBanner__container img {
-  width: 236px;
-  height: 169px;
-}
-
 /* shortcut-container */
 .shortcut-container {
   width: 90%;

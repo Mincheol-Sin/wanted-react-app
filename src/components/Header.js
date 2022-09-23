@@ -34,19 +34,19 @@ const Header = () => {
           </li>
         </MainNav>
         <Aside>
-          <li>
+          <AsideList>
             <SearchBtn>
-              <FaSistrix size="20" />
+              <SearchIcon />
             </SearchBtn>
-          </li>
-          <li>
+          </AsideList>
+          <AsideList>
             <SignUpBtn>회원가입/로그인</SignUpBtn>
-          </li>
-          <li>
+          </AsideList>
+          <AsideList>
             <Dashboard to="/" className="dashboard">
               기업 서비스
             </Dashboard>
-          </li>
+          </AsideList>
         </Aside>
       </HeaderContainer>
     </HeaderBar>
@@ -112,11 +112,22 @@ const Aside = styled.ul`
   align-items: center;
 `;
 
-const SearchBtn = styled.button`
+const AsideList = styled.li`
   padding: 0 10px;
-  margin-top: 5px;
-  width: 18px;
+`;
+
+const SearchBtn = styled.button`
+  padding: 0 10px
+  width: 28px;
   height: 18px;
+  display: flex;
+  justify-content: center;
+  align-items: center
+`;
+
+const SearchIcon = styled(FaSistrix)`
+  width: 100%;
+  height: 100%;
 `;
 
 const Dashboard = styled(Link)`

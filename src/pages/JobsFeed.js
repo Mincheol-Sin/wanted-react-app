@@ -5,6 +5,7 @@ import styled from "styled-components";
 import TopBanner from "../components/TopBannerSlider";
 import LineBanner from "../components/LineBanner";
 import Matching from "../components/Matching";
+import CareerBanner from "../components/CareerBanner";
 
 const JobsFeed = () => {
   const settings = {
@@ -119,15 +120,7 @@ const JobsFeed = () => {
       <TopBanner />
       <LineBanner />
       <Matching />
-      <article class="careerBanner">
-        <div class="careerBanner__container">
-          <div class="careerBanner__content">
-            <p>입사일 퇴사일 헷갈릴 때, 내 경력 한눈에 모아보기!</p>
-            <button type="button">지금 확인하기</button>
-          </div>
-          <img src="https://static.wanted.co.kr/career_connect/banner.png" />
-        </div>
-      </article>
+      <CareerBanner />
       <nav class="shortcut-container">
         <ul>
           <li>
