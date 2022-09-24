@@ -1,11 +1,3 @@
-/* 슬라이더 관리 css */
-
-.introduce-slider .slick-list {
-  margin: 0 auto;
-  overflow: hidden;
-  width: 100%;
-}
-
 /* companyIntroduce */
 .themeBanner {
   width: 90%;

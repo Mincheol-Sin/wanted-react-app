@@ -5,8 +5,6 @@ import "../css/jobsfeed.css";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
-import Matching from "../components/Matching";
-import CareerBanner from "../components/CareerBanner";
 
 const JobsFeed = () => {
   const topBannerSettings = {
@@ -183,9 +181,40 @@ const JobsFeed = () => {
           채용 중인 포지션 보러가기
         </Link>
       </LineBanner>
-      <Matching />
-      <CareerBanner />
-      <ShortCut>
+      <MatchingBanner>
+        <div className="matching-header">
+          <div className="logo-container">
+            <img src="imgs/wanted-logo1.png" alt="wantedLogo" width={"80px"} />
+            <img
+              src="https://static.wanted.co.kr/images/ai/logo-wantedai.png"
+              alt="wantedLogo2"
+              width={"170px"}
+            />
+          </div>
+          <div className="matching-title">
+            <img
+              src="https://static.wanted.co.kr/images/ai/logo-wantedai.png"
+              alt="wantedLogo2"
+              width={"120px"}
+            />
+            가 제안하는 합격률 높은 포지션
+          </div>
+        </div>
+        <div className="matching-body">
+          <h3>회원가입하면 포지션을 추천해드려요.</h3>
+          <button type="button">지금 시작하기</button>
+        </div>
+      </MatchingBanner>
+      <CareerBanner>
+        <div className="careerBanner-container">
+          <div class="careerBanner__content">
+            <p>입사일 퇴사일 헷갈릴 때, 내 경력 한눈에 모아보기!</p>
+            <button type="button">지금 확인하기</button>
+          </div>
+          <img src="imgs/banner-img.png" alt="careerBannerImg" />
+        </div>
+      </CareerBanner>
+      <ShortCutBanner>
         <ul className="shortcut-container">
           <li>
             <button type="button">
@@ -222,8 +251,22 @@ const JobsFeed = () => {
             </button>
           </li>
         </ul>
-      </ShortCut>
-      <CompanyIntroduceSection></CompanyIntroduceSection>
+      </ShortCutBanner>
+      <CompanyIntroduceSection>
+        <div className="first-container">
+          <div className="first-container__header">
+            <h2 className="first-container__header__title">
+              <Link to="/">#급성장 중</Link>
+              <img
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=75&q=75"
+                alt="rapidGrowthImg"
+              />
+              <span>회사를 소개합니다</span>
+            </h2>
+            <p>포지션으로 더보기 {">"}</p>
+          </div>
+        </div>
+      </CompanyIntroduceSection>
       <DividerLine />
     </>
   );
@@ -249,7 +292,6 @@ const TopBanner = styled.div`
     max-width: 100%;
   }
 `;
-
 const LineBanner = styled.div`
   margin: 60px auto;
 
@@ -279,8 +321,96 @@ const LineBanner = styled.div`
     margin-right: 15px;
   }
 `;
+const MatchingBanner = styled.article`
+  background-color: rgb(245, 248, 251);
+  padding-bottom: 60px;
+  text-align: center;
 
-const ShortCut = styled.nav`
+  .matching-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0 20px;
+    position: relative;
+    right: 20px;
+  }
+
+  .logo-container img {
+    width: ${(props) => props.width}
+    height: 80px;
+  }
+
+  .matching-title {
+    margin-bottom: 6px;
+    font-size: 22px;
+    font-weight: 700;
+    color: #111;
+    margin-bottom: 6px;
+  }
+
+  .matching-body {
+    color: #555;
+    font-size: 16px;
+    line-height: 19.2px;
+  }
+
+  .matching-body button {
+    padding: 10px 20px;
+    border-radius: 25px;
+    line-height: 22px;
+    background-color: #36f;
+    font-size: 16px;
+    font-weight: 700;
+    color: #fefefe;
+    margin: 20px auto 0 auto;
+  }
+`;
+const CareerBanner = styled.article`
+  height: 150px;
+  background: linear-gradient(90deg, #ddebff -0.28%, #b7d8ff);
+  margin: 20px 0 60px;
+
+  .careerBanner-container {
+    width: 90%;
+    height: inherit;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    max-width: 1060px;
+    color: #5071dc;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 29px;
+    overflow-y: hidden;
+  }
+
+  .careerBanner__content button {
+    border-radius: 25px;
+    background-color: #5071dc;
+    color: #fff;
+    margin-top: 10px;
+    height: 36px;
+    font-size: 14px;
+    width: 119px;
+    font-weight: 700;
+    line-height: 16px;
+  }
+
+  .careerBanner-container img {
+    width: 236px;
+    height: 169px;
+    }
+  }
+`;
+const ShortCutBanner = styled.nav`
   width: 90%;
   max-width: 1060px;
   margin: 0 auto;
@@ -323,29 +453,45 @@ const ShortCut = styled.nav`
     margin-bottom: 4px;
   }
 `;
+const CompanyIntroduceSection = styled.section`
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+  text-align: center;
 
-const CompanyIntroduceSection = styled.div`
+  .first-container {
+    margin-bottom: 90px;
+  }
+
+  .first-container__header {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .first-container__header__title {
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+
+  .first-container__header__title img {
+    position: relative;
+    width: 24px;
+    height: 24px;
+    top: 3px;
+    margin: 0 4px;
+  }
+
+  .first-container span {
+    font-weight: 400;
+  }
+
   .slick-list {
     margin: 0 auto;
     overflow: hidden;
     width: 100%;
   }
-`;
-
-const Container = styled.div`
-  width: 90%;
-  margin: 0 auto;
-  margin-bottom: 90px;
-  max-width: 1060px;
-  text-align: center;
-  margin-top: ${(props) => props.mt};
-`;
-
-const ContainerTitle = styled.h2`
-  font-size: 22px;
-  font-weight: 700;
-  line-height: 24px;
-  margin-bottom: ${(props) => props.mb};
 `;
 
 const ContainerTitleImg = styled.img`
