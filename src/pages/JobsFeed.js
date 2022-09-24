@@ -1,19 +1,21 @@
 import Slider from "react-slick";
-import { Link } from "react-router-dom";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 import "../css/jobsfeed.css";
+import { Link } from "react-router-dom";
+import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
-import TopBanner from "../components/TopBannerSlider";
-import LineBanner from "../components/LineBanner";
 import Matching from "../components/Matching";
 import CareerBanner from "../components/CareerBanner";
 
 const JobsFeed = () => {
-  const settings = {
+  const topBannerSettings = {
     dots: false,
     infinite: true,
     speed: 500,
-    slidesToShow: 2,
-    slidesToScroll: 2,
+    autoplay: true,
+    slidesToShow: 1,
+    slidesToScroll: 1,
   };
 
   const companyData = [
@@ -117,12 +119,74 @@ const JobsFeed = () => {
 
   return (
     <>
-      <TopBanner />
-      <LineBanner />
+      <TopBanner>
+        <Slider {...topBannerSettings}>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1802%2F4480ef99.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1422%2Fb4a42a0f.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1794%2F5db4820b.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1804%2F46348b23.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1795%2F05d726f2.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1793%2F07342bec.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1589%2F4d187185.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1785%2Ff28ae1db.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1806%2F55d3cb39.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1805%2Fc888f442.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1750%2F62c0f917.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1784%2F2709f64c.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1792%2F50191ad1.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1795%2F05d726f2.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1804%2F46348b23.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1802%2F4480ef99.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1785%2Ff28ae1db.jpg&w=1060&q=100" />
+          </div>
+          <div className="topBanner-slide">
+            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1422%2Fb4a42a0f.jpg&w=1060&q=100" />
+          </div>
+        </Slider>
+      </TopBanner>
+      <LineBanner>
+        <Link to="/" className="position-link">
+          <IoSearchOutline className="search-icon" />
+          채용 중인 포지션 보러가기
+        </Link>
+      </LineBanner>
       <Matching />
       <CareerBanner />
-      <nav class="shortcut-container">
-        <ul>
+      <ShortCut>
+        <ul className="shortcut-container">
           <li>
             <button type="button">
               <svg
@@ -158,80 +222,115 @@ const JobsFeed = () => {
             </button>
           </li>
         </ul>
-      </nav>
-      <div className="introduce-slider">
-        <Container>
-          <ContainerTitle mb="9px">
-            <Link to="/">#급성장 중</Link>
-            <ContainerTitleImg src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=75&q=75" />
-            <ContainerTitleSpan>회사를 소개합니다</ContainerTitleSpan>
-          </ContainerTitle>
-          <PositionMore>
-            <Link to="/">포지션으로 더보기 {">"}</Link>
-          </PositionMore>
-          <Slider {...settings}>
-            {companyData.map((data) => {
-              if (data.type == "rapidGrowth") {
-                return (
-                  <CardContainer>
-                    <Link to="/">
-                      <CardHeader imgSrc={data.companyImg} />
-                      <CardBody>
-                        <CardContent>
-                          <CompanyLogo imgSrc={data.logo} />
-                          <CompanyInfo>
-                            <CompanyName>{data.name}</CompanyName>
-                            <CompanyIndustry>{data.industry}</CompanyIndustry>
-                          </CompanyInfo>
-                        </CardContent>
-                        <FollwBtn type="button">팔로우</FollwBtn>
-                      </CardBody>
-                    </Link>
-                  </CardContainer>
-                );
-              }
-            })}
-          </Slider>
-        </Container>
-
-        <Container>
-          <ContainerTitle mb="9px">
-            <Link to="/">#일한만큼 보상받는</Link>
-            <ContainerTitleImg src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=75&q=75" />
-            <ContainerTitleSpan>회사를 소개합니다</ContainerTitleSpan>
-          </ContainerTitle>
-          <PositionMore>
-            <Link to="/">포지션으로 더보기 {">"}</Link>
-          </PositionMore>
-          <Slider {...settings}>
-            {companyData.map((data) => {
-              if (data.type == "rewardForWork") {
-                return (
-                  <CardContainer>
-                    <Link to="/">
-                      <CardHeader imgSrc={data.companyImg} />
-                      <CardBody>
-                        <CardContent>
-                          <CompanyLogo imgSrc={data.logo} />
-                          <CompanyInfo>
-                            <CompanyName>{data.name}</CompanyName>
-                            <CompanyIndustry>{data.industry}</CompanyIndustry>
-                          </CompanyInfo>
-                        </CardContent>
-                        <FollwBtn type="button">팔로우</FollwBtn>
-                      </CardBody>
-                    </Link>
-                  </CardContainer>
-                );
-              }
-            })}
-          </Slider>
-        </Container>
-      </div>
+      </ShortCut>
+      <CompanyIntroduceSection></CompanyIntroduceSection>
       <DividerLine />
     </>
   );
 };
+
+const TopBanner = styled.div`
+  margin-top: 50px;
+  padding-top: 25px;
+  width: 100%;
+
+  .slick-list {
+    overflow: visible;
+    max-width: 1060px;
+    margin: 0 auto;
+  }
+
+  .slick-slide {
+    padding: 0 10px;
+  }
+
+  .slick-slide img {
+    border-radius: 5px;
+    max-width: 100%;
+  }
+`;
+
+const LineBanner = styled.div`
+  margin: 60px auto;
+
+  .position-link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(
+      90deg,
+      #01a9fe -12%,
+      #2f5fef 37%,
+      #046afe 72%,
+      #00d2dd 110%
+    );
+    border-radius: 38.5px;
+    max-width: 1060px;
+    margin: auto auto;
+    padding: 21px 30px;
+    font-size: 18px;
+    font-weight: 700;
+    color: #fff;
+  }
+
+  .search-icon {
+    width: 28px;
+    height: 28px;
+    margin-right: 15px;
+  }
+`;
+
+const ShortCut = styled.nav`
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 60px 0 85px;
+
+  .shortcut-container {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  .shortcut-container li {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80px;
+    flex: 1 0;
+  }
+
+  .shortcut-container li:first-child {
+    background-color: #f2f5ff;
+    border-top-left-radius: 38.5px;
+    border-bottom-left-radius: 38.5px;
+  }
+
+  .shortcut-container li:last-child {
+    background-color: #f2fbf5;
+    border-top-right-radius: 38.5px;
+    border-bottom-right-radius: 38.5px;
+  }
+
+  .shortcut-container button {
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .shortcut-container svg {
+    margin-right: 12px;
+    margin-bottom: 4px;
+  }
+`;
+
+const CompanyIntroduceSection = styled.div`
+  .slick-list {
+    margin: 0 auto;
+    overflow: hidden;
+    width: 100%;
+  }
+`;
 
 const Container = styled.div`
   width: 90%;

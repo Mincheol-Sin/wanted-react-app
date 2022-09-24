@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import { FaSistrix } from "react-icons/fa";
+import { IoSearchOutline } from "react-icons/io5";
 
 const Header = () => {
   return (
@@ -114,18 +114,25 @@ const Aside = styled.ul`
 
 const AsideList = styled.li`
   padding: 0 10px;
+  display: flex;
+
+  &:last-child::before {
+    display: block;
+    content: "";
+    width: 1px;
+    height: 10px;
+    background-color: #e1e2e3;
+    margin: auto 10px;
+  }
 `;
 
 const SearchBtn = styled.button`
   padding: 0 10px
   width: 28px;
   height: 18px;
-  display: flex;
-  justify-content: center;
-  align-items: center
 `;
 
-const SearchIcon = styled(FaSistrix)`
+const SearchIcon = styled(IoSearchOutline)`
   width: 100%;
   height: 100%;
 `;
@@ -141,15 +148,6 @@ const Dashboard = styled(Link)`
   padding: 0 10px;
   margin-left: 15px;
   font-weight: 400;
-
-  &::before {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 10px;
-    background-color: #e1e2e3;
-    margin: auto 10px;
-  }
 `;
 
 // .header-nav .header-nav__subNav svg {

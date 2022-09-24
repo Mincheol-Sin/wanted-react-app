@@ -1,66 +1,9 @@
 /* 슬라이더 관리 css */
 
-.topBanner-slider .slick-list {
-  width: 1060px;
-  margin: 0 auto;
-  overflow: visible;
-}
-
-.slick-list img {
-  border-radius: 5px;
-  max-width: 100%;
-}
-
 .introduce-slider .slick-list {
   margin: 0 auto;
   overflow: hidden;
   width: 100%;
-}
-
-/* shortcut-container */
-.shortcut-container {
-  width: 90%;
-  max-width: 1060px;
-  margin: 0 auto;
-  padding: 60px 0 85px;
-}
-
-.shortcut-container ul {
-  display: flex;
-  justify-content: space-around;
-}
-
-.shortcut-container ul li {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80px;
-  flex: 1 0;
-}
-
-.shortcut-container ul li:first-child {
-  background-color: #f2f5ff;
-  border-top-left-radius: 38.5px;
-  border-bottom-left-radius: 38.5px;
-  border-left: none;
-}
-
-.shortcut-container ul li:last-child {
-  background-color: #f2fbf5;
-  border-top-right-radius: 38.5px;
-  border-bottom-right-radius: 38.5px;
-}
-
-.shortcut-container ul li button {
-  display: flex;
-  align-items: center;
-  font-size: 18px;
-  font-weight: 500;
-}
-
-.shortcut-container ul li button svg {
-  margin-right: 12px;
-  margin-bottom: 4px;
 }
 
 /* companyIntroduce */
