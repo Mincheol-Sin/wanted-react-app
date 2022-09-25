@@ -7,7 +7,7 @@ import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
 
 const JobsFeed = () => {
-  const topBannerSettings = {
+  const topbanner_settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -16,7 +16,40 @@ const JobsFeed = () => {
     slidesToScroll: 1,
   };
 
-  const companyIntroduceSettings = {
+  const topBanner_data = [
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1793%2F07342bec.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1422%2Fb4a42a0f.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1794%2F5db4820b.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1804%2F46348b23.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1795%2F05d726f2.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1802%2F4480ef99.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1806%2F55d3cb39.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1805%2Fc888f442.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1784%2F2709f64c.jpg&w=1060&q=100",
+    },
+    {
+      img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1589%2F4d187185.jpg&w=1060&q=100",
+    },
+  ];
+
+  const company_introduce_settings = {
     dots: true,
     infinite: true,
     speed: 500,
@@ -24,7 +57,7 @@ const JobsFeed = () => {
     slidesToScroll: 2,
   };
 
-  const companyData = [
+  const company_data = [
     {
       type: "rapidGrowth",
       companyImg:
@@ -135,64 +168,56 @@ const JobsFeed = () => {
     },
   ];
 
+  const themeBanner_data = [
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg1.webp",
+      title: "주말 3일! 주 4일 근무 기업",
+      info: "일과 삶의 균형을 찾을 수 있는 기업을 소개합니다.",
+      companyLogo: [],
+    },
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg2.webp",
+      title: "이직을 Wanted! 잠실/성수 소재 기업",
+      info: "잠실/성수 소재의 채용 중인 기업을 소개합니다.",
+      companyLogo: [],
+    },
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg3.webp",
+      title: "연봉 Flex! 연봉 상위 10% 기업",
+      info: "업계별 상위 연봉을 제시하는 기업을 소개합니다.",
+      companyLogo: [],
+    },
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg4.webp",
+      title: "이직을 Wanted! 주 2일 이상 재택근무 기업",
+      info: "주 2일 이상 재택근무 중인 기업을 소개합니다.",
+      companyLogo: [],
+    },
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg5.webp",
+      title: "이직은 Wanted! 마포/여의도/광화문 소재 기업",
+      info: "마포/여의도/광화문 소재의 채용 중인 기업을 소개합니다.",
+      companyLogo: [],
+    },
+    {
+      imgSrc: "imgs/themeBannerImgs/themeBannerImg6.webp",
+      title: "주요 대기업",
+      info: "사업성, 성장성, 인지도까지! 세 가지를 모두 갖춘 대기업을 소개합니다.",
+      companyLogo: [],
+    },
+  ];
+
   return (
     <>
       <TopBanner>
-        <Slider {...topBannerSettings}>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1802%2F4480ef99.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1422%2Fb4a42a0f.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1794%2F5db4820b.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1804%2F46348b23.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1795%2F05d726f2.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1793%2F07342bec.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1589%2F4d187185.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1785%2Ff28ae1db.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1806%2F55d3cb39.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1805%2Fc888f442.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1750%2F62c0f917.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1784%2F2709f64c.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1792%2F50191ad1.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1795%2F05d726f2.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1804%2F46348b23.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1802%2F4480ef99.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1785%2Ff28ae1db.jpg&w=1060&q=100" />
-          </div>
-          <div className="topBanner-slide">
-            <img src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1422%2Fb4a42a0f.jpg&w=1060&q=100" />
-          </div>
+        <Slider {...topbanner_settings}>
+          {topBanner_data.map((data) => {
+            return (
+              <div className="topBanner-slide">
+                <img src={data.img} alt="" />
+              </div>
+            );
+          })}
         </Slider>
       </TopBanner>
       <LineBanner>
@@ -285,8 +310,8 @@ const JobsFeed = () => {
             </h2>
             <p>포지션으로 더보기 {">"}</p>
           </div>
-          <Slider {...companyIntroduceSettings}>
-            {companyData
+          <Slider {...company_introduce_settings}>
+            {company_data
               .filter((data) => {
                 return data.type === "rapidGrowth";
               })
@@ -330,8 +355,8 @@ const JobsFeed = () => {
             </h2>
             <p>포지션으로 더보기 {">"}</p>
           </div>
-          <Slider {...companyIntroduceSettings}>
-            {companyData
+          <Slider {...company_introduce_settings}>
+            {company_data
               .filter((data) => {
                 return data.type === "rewardForWork";
               })
@@ -364,6 +389,31 @@ const JobsFeed = () => {
         </div>
       </CompanyIntroduceSection>
       <DividerLine />
+      <ThemeBanner>
+        <div className="themeBanner__header">
+          <h2>테마로 모아보는 요즘 채용</h2>
+        </div>
+        <Slider {...company_introduce_settings}>
+          {themeBanner_data.map((data) => {
+            return (
+              <div className="slide-container">
+                <Link to="/" className="slide-card">
+                  <img
+                    className="slide-card__header"
+                    src={data.imgSrc}
+                    alt=""
+                  />
+                  <div className="slide-card__body">
+                    <h2>{data.title}</h2>
+                    <p>{data.info}</p>
+                  </div>
+                  <div className="company-logo"></div>
+                </Link>
+              </div>
+            );
+          })}
+        </Slider>
+      </ThemeBanner>
     </>
   );
 };
@@ -651,5 +701,43 @@ const DividerLine = styled.div`
   height: 1px;
   background-color: #ececec;
 `;
+const ThemeBanner = styled.article`
+  width: 90%;
+  margin: 0 auto;
+  max-width: 1060px;
+  padding: 72px 0 72px 0;
 
+  .themeBanner__header {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 24px;
+  }
+
+  .slick-slide {
+    padding: 10px;
+  }
+
+  .slide-card__header {
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+  }
+
+  .slide-card__body {
+    margin-top: 16px;
+  }
+
+  .slide-card__body h2 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .slide-card__body p {
+    margin-top: 4px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #939393;
+  }
+`;
 export default JobsFeed;
