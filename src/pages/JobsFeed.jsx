@@ -8,7 +8,7 @@ import styled from "styled-components";
 
 const JobsFeed = () => {
   const topBannerSettings = {
-    dots: false,
+    dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
@@ -16,12 +16,21 @@ const JobsFeed = () => {
     slidesToScroll: 1,
   };
 
+  const companyIntroduceSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 2,
+    slidesToScroll: 2,
+  };
+
   const companyData = [
     {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F49%2F1eeyyoie3qgnqsj0__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.2bf57da8.png&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.2bf57da8.png&w=42&q=100",
       name: "데이원컴퍼니",
       industry: "교육",
     },
@@ -29,7 +38,8 @@ const JobsFeed = () => {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F136%2Fjhtqznnhtixesx0t__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.d2c59d45.png&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.d2c59d45.png&w=42&q=100",
       name: "하이퍼커넥트",
       industry: "IT, 컨텐츠",
     },
@@ -37,7 +47,8 @@ const JobsFeed = () => {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F282%2Fgwsw3ljzwrbna5w1__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.950aec10.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.950aec10.jpg&w=42&q=100",
       name: "백패커(idus)",
       industry: "IT, 컨텐츠",
     },
@@ -45,7 +56,8 @@ const JobsFeed = () => {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F5394%2Fjxosc5of5rhbj82o__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.66b7615f.png&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.66b7615f.png&w=42&q=100",
       name: "오지큐",
       industry: "IT, 컨텐츠",
     },
@@ -53,7 +65,8 @@ const JobsFeed = () => {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F332%2Fijuur6zwf60zbflv__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.5129425e.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.5129425e.jpg&w=42&q=100",
       name: "매드업",
       industry: "IT, 콘텐츠",
     },
@@ -61,7 +74,8 @@ const JobsFeed = () => {
       type: "rapidGrowth",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F2221%2Fqb3mjyiaeytoyc7x__1080_790.png&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.c2f82a4e.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.c2f82a4e.jpg&w=42&q=100",
       name: "넷마블",
       industry: "IT, 콘텐츠",
     },
@@ -69,7 +83,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F28672%2Fjerscppsk9grp4x2__1080_790.png&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.bc46812f.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.bc46812f.jpg&w=42&q=100",
       name: "모모랩스",
       industry: "제조",
     },
@@ -77,7 +92,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F28835%2Fgllbjfuz8hk8r1u3__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.408c9307.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.408c9307.jpg&w=42&q=100",
       name: "헥사인",
       industry: "기타 서비스업",
     },
@@ -85,7 +101,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F26113%2Frj2niggsts8hgyzz__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.6cdc51a7.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.6cdc51a7.jpg&w=42&q=100",
       name: "토리든",
       industry: "판매유통",
     },
@@ -93,7 +110,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F15170%2Fyjtgzxxgqbke9llp__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.51d70e95.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.51d70e95.jpg&w=42&q=100",
       name: "아이메디신",
       industry: "컨텐츠",
     },
@@ -101,7 +119,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F519%2Fs71tual9fbehaatp__1080_790.jpg&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.ab706792.jpg&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.ab706792.jpg&w=42&q=100",
       name: "이스턴넥트웍스",
       industry: "IT, 컨텐츠",
     },
@@ -109,7 +128,8 @@ const JobsFeed = () => {
       type: "rewardForWork",
       companyImg:
         "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F30814%2Fmttxbsgu1xgrsv6f__1080_790.png&w=520&q=100",
-      logo: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.ee957ab4.png&w=42&q=100",
+      logoSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_4.ee957ab4.png&w=42&q=100",
       name: "넷타겟",
       industry: "전문, 과학기술",
     },
@@ -265,6 +285,82 @@ const JobsFeed = () => {
             </h2>
             <p>포지션으로 더보기 {">"}</p>
           </div>
+          <Slider {...companyIntroduceSettings}>
+            {companyData
+              .filter((data) => {
+                return data.type === "rapidGrowth";
+              })
+              .map((data, i) => {
+                return (
+                  <Link to="/" className="slide-card">
+                    <img
+                      className="slide-card__header"
+                      src={data.companyImg}
+                      alt=""
+                    />
+                    <div className="slide-card__body">
+                      <div className="slide-card__body__content">
+                        <img
+                          className="slide-card__body__content__logo"
+                          src={data.logoSrc}
+                          alt=""
+                        />
+                        <div className="slide-card__body__content__info">
+                          <h3>{data.name}</h3>
+                          <p>{data.industry}</p>
+                        </div>
+                      </div>
+                      <button type="button">팔로우</button>
+                    </div>
+                  </Link>
+                );
+              })}
+          </Slider>
+        </div>
+
+        <div className="first-container">
+          <div className="first-container__header">
+            <h2 className="first-container__header__title">
+              <Link to="/">#일한 만큼 보상 받는</Link>
+              <img
+                src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=75&q=75"
+                alt="rapidGrowthImg"
+              />
+              <span>회사를 소개합니다</span>
+            </h2>
+            <p>포지션으로 더보기 {">"}</p>
+          </div>
+          <Slider {...companyIntroduceSettings}>
+            {companyData
+              .filter((data) => {
+                return data.type === "rewardForWork";
+              })
+              .map((data, i) => {
+                return (
+                  <Link to="/" className="slide-card">
+                    <img
+                      className="slide-card__header"
+                      src={data.companyImg}
+                      alt=""
+                    />
+                    <div className="slide-card__body">
+                      <div className="slide-card__body__content">
+                        <img
+                          className="slide-card__body__content__logo"
+                          src={data.logoSrc}
+                          alt=""
+                        />
+                        <div className="slide-card__body__content__info">
+                          <h3>{data.name}</h3>
+                          <p>{data.industry}</p>
+                        </div>
+                      </div>
+                      <button type="button">팔로우</button>
+                    </div>
+                  </Link>
+                );
+              })}
+          </Slider>
         </div>
       </CompanyIntroduceSection>
       <DividerLine />
@@ -483,94 +579,71 @@ const CompanyIntroduceSection = styled.section`
     margin: 0 4px;
   }
 
+  .first-container__header p {
+    color: #767676;
+    font-weight: 500;
+  }
+
   .first-container span {
     font-weight: 400;
   }
 
-  .slick-list {
+  .slide-card {
+    padding: 10px;
+  }
+
+  .slide-card__header {
+    width: 100%;
+    height: 280px;
+    border-radius: 5px;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  .slide-card__body {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 17px;
+  }
+
+  .slide-card__body__content {
+    display: flex;
+    text-align: left;
+  }
+
+  .slide-card__body__content h3 {
+    font-size: 18px;
+    font-weight: 700;
+  }
+
+  .slide-card__body__content p {
+    color: #999;
+  }
+
+  .slide-card__body__content__logo {
+    width: 42px;
+    height: 42px;
+    margin-right: 12px;
+    box-shadow: 0 0 0 1px rgb(0 0 0 / 10%);
+    background-position: center;
+  }
+
+  .slide-card button {
+    font-size: 15px;
+    font-weight: 700;
+    border: 1px solid #e1e2e3;
+    border-radius: 25px;
+    color: #36f;
+    background-color: #fff;
+    padding: 5px 25.5px;
+  }
+
+  .slick-slider {
+    height: 380px;
     margin: 0 auto;
-    overflow: hidden;
     width: 100%;
   }
 `;
-
-const ContainerTitleImg = styled.img`
-  position: relative;
-  width: 24px;
-  height: 24px;
-  top: 3px;
-  margin: 0 4px;
-`;
-
-const ContainerTitleSpan = styled.span`
-  font-weight: 400;
-`;
-
-const PositionMore = styled.p`
-  color: #767676;
-  font-weight: 500;
-  font-size: 15px;
-  margin-bottom: 5px;
-`;
-
-const CardContainer = styled.div`
-  padding: 10px;
-`;
-
-const CardHeader = styled.div`
-  width: 100%;
-  height: 280px;
-  border-radius: 5px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url(${(props) => props.imgSrc});
-`;
-
-const CardBody = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 17px;
-`;
-
-const CardContent = styled.div`
-  display: flex;
-  text-align: left;
-`;
-
-const CompanyInfo = styled.div`
-  height: 42px;
-`;
-
-const CompanyLogo = styled.div`
-  width: 42px;
-  height: 42px;
-  margin-right: 12px;
-  box-shadow: inset 0 0 0 1px rgb(0 0 0 / 10%);
-  background-position: center;
-  background-image: url(${(props) => props.imgSrc});
-`;
-
-const CompanyName = styled.h3`
-  font-size: 18px;
-  font-weight: 700;
-`;
-
-const CompanyIndustry = styled.p`
-  font-size: 14px;
-  font-weight: 500;
-  color: #999;
-`;
-
-const FollwBtn = styled.button`
-  font-size: 15px;
-  font-weight: 700;
-  border: 1px solid #e1e2e3;
-  border-radius: 25px;
-  color: #36f;
-  background-color: #fff;
-  padding: 5px 25.5px;
-`;
-
 const DividerLine = styled.div`
   width: 90%;
   max-width: 1060px;
