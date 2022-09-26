@@ -1,10 +1,12 @@
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import "../css/jobsfeed.css";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
+import { DividerLine } from "../components/DividerLine";
+import JobCard from "../components/JobCard";
+import Footer from "../components/Footer";
 
 const JobsFeed = () => {
   const topbanner_settings = {
@@ -207,6 +209,41 @@ const JobsFeed = () => {
     },
   ];
 
+  const position_data = [
+    {
+      imgSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F17898%2Fhbursbfcc9cuktml__400_400.jpg&w=400&q=75",
+      position: "바이럴 마케터",
+      company: "킨다그로스",
+      location: "서울",
+      reward: "1,000,000",
+    },
+    {
+      imgSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F1698%2Fxqqqd5e8our89rry__400_400.jpg&w=400&q=75",
+      position: "[랩노쉬] 브랜드마케터",
+      company: "이그니스",
+      location: "서울",
+      reward: "1,000,000",
+    },
+    {
+      imgSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F26106%2Frpfzdrn1wqpd8zkb__400_400.png&w=400&q=75",
+      position: "CEO Staff (전략기획)",
+      company: "전략기획",
+      location: "서울",
+      reward: "1,000,000",
+    },
+    {
+      imgSrc:
+        "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F12359%2Fm85rhmdhelghchsm__400_400.png&w=400&q=75",
+      position: "UX Researcher",
+      company: "에이치디정션",
+      location: "서울",
+      reward: "1,000,000",
+    },
+  ];
+
   return (
     <>
       <TopBanner>
@@ -388,7 +425,9 @@ const JobsFeed = () => {
           </Slider>
         </div>
       </CompanyIntroduceSection>
+
       <DividerLine />
+
       <ThemeBanner>
         <div className="themeBanner__header">
           <h2>테마로 모아보는 요즘 채용</h2>
@@ -414,6 +453,28 @@ const JobsFeed = () => {
           })}
         </Slider>
       </ThemeBanner>
+
+      <DividerLine />
+
+      <FeaturedJobList>
+        <h2>요즘 뜨는 포지션</h2>
+        <ul class="job-list">
+          {position_data.map((data, i) => {
+            return (
+              <li>
+                <JobCard
+                  imgSrc={data.imgSrc}
+                  position={data.position}
+                  company={data.company}
+                  location={data.location}
+                  reward={data.reward}
+                />
+              </li>
+            );
+          })}
+        </ul>
+      </FeaturedJobList>
+      <Footer />
     </>
   );
 };
@@ -694,13 +755,6 @@ const CompanyIntroduceSection = styled.section`
     width: 100%;
   }
 `;
-const DividerLine = styled.div`
-  width: 90%;
-  max-width: 1060px;
-  margin: 0 auto;
-  height: 1px;
-  background-color: #ececec;
-`;
 const ThemeBanner = styled.article`
   width: 90%;
   margin: 0 auto;
@@ -738,6 +792,31 @@ const ThemeBanner = styled.article`
     font-size: 14px;
     font-weight: 500;
     color: #939393;
+  }
+`;
+const FeaturedJobList = styled.article`
+  width: 90%;
+  max-width: 1060px;
+  margin: 0 auto;
+  padding: 70px 0 50px;
+
+  h2 {
+    text-align: center;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 1.05;
+    color: #111;
+    margin-bottom: 30px;
+  }
+
+  .job-list {
+    display: flex;
+    margin: -10px;
+  }
+
+  .job-list li {
+    width: 25%;
+    padding: 10px;
   }
 `;
 export default JobsFeed;
