@@ -5,50 +5,64 @@ import { IoSearchOutline } from "react-icons/io5";
 const Header = () => {
   return (
     <HeaderBar>
-      <HeaderContainer>
-        <SubNav>
-          <MenuBtn />
-          <MainLogo to="/" />
-        </SubNav>
-        <MainNav>
+      <div className="header-container">
+        <div className="subNav">
+          <button type="button" className="menu-btn"></button>
+          <Link to="/" className="main-logo" />
+        </div>
+        <ul className="mainNav">
           <li>
-            <NavLink to="/jobsfeed">채용</NavLink>
+            <Link to="/jobsfeed" className="mainNav__item">
+              채용
+            </Link>
           </li>
           <li>
-            <NavLink to="/">이벤트</NavLink>
+            <Link to="/" className="mainNav__item">
+              이벤트
+            </Link>
           </li>
           <li>
-            <NavLink to="/">직군별 연봉</NavLink>
+            <Link to="/" className="mainNav__item">
+              직군별 연봉
+            </Link>
           </li>
           <li>
-            <NavLink to="/">이력서</NavLink>
+            <Link to="/" className="mainNav__item">
+              이력서
+            </Link>
           </li>
           <li>
-            <NavLink to="/">커뮤니티</NavLink>
+            <Link to="/" className="mainNav__item">
+              커뮤니티
+            </Link>
           </li>
           <li>
-            <NavLink to="/">프리랜서</NavLink>
+            <Link to="/" className="mainNav__item">
+              프리랜서
+            </Link>
           </li>
           <li>
-            <NavLink to="/">AI 합격예측</NavLink>
+            <Link to="/" className="mainNav__item">
+              AI 합격예측
+            </Link>
           </li>
-        </MainNav>
-        <Aside>
-          <AsideList>
-            <SearchBtn>
-              <SearchIcon />
-            </SearchBtn>
-          </AsideList>
-          <AsideList>
-            <SignUpBtn>회원가입/로그인</SignUpBtn>
-          </AsideList>
-          <AsideList>
-            <Dashboard to="/" className="dashboard">
+        </ul>
+        <ul className="aside">
+          <li>
+            <button type="button" className="search-btn">
+              <IoSearchOutline />
+            </button>
+          </li>
+          <li>
+            <button type="button">회원가입/로그인</button>
+          </li>
+          <li>
+            <a href="/" className="dashboard-btn">
               기업 서비스
-            </Dashboard>
-          </AsideList>
-        </Aside>
-      </HeaderContainer>
+            </a>
+          </li>
+        </ul>
+      </div>
     </HeaderBar>
   );
 };
@@ -60,100 +74,88 @@ const HeaderBar = styled.div`
   border-bottom: 1px solid #e1e2e3;
   z-index: 999;
   background-color: #fff;
-`;
 
-const HeaderContainer = styled.div`
-  width: 90%;
-  max-width: 1060px;
-  height: 50px;
-  margin: 0 auto;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 14px;
-  font-weight: 600;
-`;
+  .header-container {
+    width: 90%;
+    max-width: 1060px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+    font-weight: 600;
+  }
 
-const SubNav = styled.div`
-  display: flex;
-  align-items: center;
-`;
+  .subNav {
+    display: flex;
+    align-items: center;
+  }
 
-const MenuBtn = styled.button`
-  width: 17px;
-  height: 14px;
-  margin-right: 12px;
-  margin-top: 1px;
-  background-image: url("/imgs/menu-btn.webp");
-  background-size: cover;
-`;
+  .subNav .menu-btn {
+    width: 17px;
+    height: 14px;
+    margin-right: 12px;
+    margin-top: 1px;
+    background-image: url("/imgs/menu-btn.webp");
+    background-size: cover;
+  }
 
-const MainLogo = styled(Link)`
-  width: 84px;
-  height: 25px;
-  margin-bottom: 3px;
-  background-image: url("/imgs/mainLogo.png");
-  background-size: cover;
-`;
+  .subNav .main-logo {
+    width: 84px;
+    height: 25px;
+    margin-bottom: 3px;
+    background-image: url("/imgs/mainLogo.png");
+    background-size: cover;
+  }
 
-const MainNav = styled.ul`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-`;
+  .mainNav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
 
-const NavLink = styled(Link)`
-  padding: 15px;
-  font-weight: 600;
-`;
+  .mainNav__item {
+    padding: 15px;
+    font-weight: 600;
+  }
 
-const Aside = styled.ul`
-  display: flex;
-  align-items: center;
-`;
+  .aside {
+    display: flex;
+  }
 
-const AsideList = styled.li`
-  padding: 0 10px;
-  display: flex;
+  .aside li {
+    padding: 0 10px;
+    display: flex;
 
-  &:last-child::before {
-    display: block;
-    content: "";
-    width: 1px;
-    height: 10px;
-    background-color: #e1e2e3;
-    margin: auto 10px;
+    :last-child::before {
+      display: block;
+      content: "";
+      width: 1px;
+      height: 10px;
+      background-color: #e1e2e3;
+      margin: auto 10px;
+  }
+
+  .search-btn svg {
+    width: 28px;
+    height: 18px;
+    position: relative;
+    top: 2px;
+  }
+
+  .dashboard-btn {
+    display: flex;
+    font-size: 13px;
+    border: 1px solid #e1e2e3;
+    border-radius: 15px;
+    height: 30px;
+    line-height: 30px;
+    color: #666;
+    padding: 0 10px;
+    margin-left: 15px;
+    font-weight: 400;
   }
 `;
 
-const SearchBtn = styled.button`
-  padding: 0 10px
-  width: 28px;
-  height: 18px;
-`;
-
-const SearchIcon = styled(IoSearchOutline)`
-  width: 100%;
-  height: 100%;
-`;
-
-const Dashboard = styled(Link)`
-  display: flex;
-  font-size: 13px;
-  border: 1px solid #e1e2e3;
-  border-radius: 15px;
-  height: 30px;
-  line-height: 30px;
-  color: #666;
-  padding: 0 10px;
-  margin-left: 15px;
-  font-weight: 400;
-`;
-
-// .header-nav .header-nav__subNav svg {
-//   margin-top: 5px;
-//   width: 18px;
-//   height: 18px; }
-
-const SignUpBtn = styled.button``;
 export default Header;

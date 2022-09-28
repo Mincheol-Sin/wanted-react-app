@@ -6,19 +6,41 @@ import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
 import { DividerLine } from "../components/DividerLine";
 import JobCard from "../components/JobCard";
-import Footer from "../components/Footer";
 
 const JobsFeed = () => {
   const topbanner_settings = {
-    dots: true,
     infinite: true,
     speed: 500,
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
   };
 
-  const topBanner_data = [
+  function SampleNextArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "red" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  function SamplePrevArrow(props) {
+    const { className, style, onClick } = props;
+    return (
+      <div
+        className={className}
+        style={{ ...style, display: "block", background: "green" }}
+        onClick={onClick}
+      />
+    );
+  }
+
+  const jobFeed_topBanner_data = [
     {
       img: "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fbanners%2F1793%2F07342bec.jpg&w=1060&q=100",
     },
@@ -248,7 +270,7 @@ const JobsFeed = () => {
     <>
       <TopBanner>
         <Slider {...topbanner_settings}>
-          {topBanner_data.map((data) => {
+          {jobFeed_topBanner_data.map((data) => {
             return (
               <div className="topBanner-slide">
                 <img src={data.img} alt="" />
@@ -474,7 +496,6 @@ const JobsFeed = () => {
           })}
         </ul>
       </FeaturedJobList>
-      <Footer />
     </>
   );
 };
@@ -484,10 +505,13 @@ const TopBanner = styled.div`
   padding-top: 25px;
   width: 100%;
 
+  .slick-slider {
+    width: 1060px;
+    margin: 0 auto;
+  }
+
   .slick-list {
     overflow: visible;
-    max-width: 1060px;
-    margin: 0 auto;
   }
 
   .slick-slide {
@@ -497,6 +521,10 @@ const TopBanner = styled.div`
   .slick-slide img {
     border-radius: 5px;
     max-width: 100%;
+  }
+
+  .slick-arrow {
+    z-index: 999;
   }
 `;
 const LineBanner = styled.div`
