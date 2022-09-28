@@ -17,7 +17,11 @@ const Main = () => {
     return (
       <div
         className={className}
-        style={{ ...style, display: "block", background: "red" }}
+        style={{
+          ...style,
+          display: "block",
+          background: "red",
+        }}
         onClick={onClick}
       />
     );
@@ -56,6 +60,7 @@ const Main = () => {
   ];
 
   const careerContent_settings = {
+    infinite: false,
     speed: 500,
     slidesToShow: 6,
     slidesToScroll: 2,
@@ -157,13 +162,22 @@ const CareerContent = styled.section`
     margin: 30px 0;
   }
 
+  .slick-track {
+    display: flex;
+  }
+
+  .slick-slide {
+    margin-right: 10px;
+  }
+
   .careerContent-slider button {
-    padding: 0 29px;
     height: 50px;
     font-size: 15px;
     border-radius: 5px;
+    border: 1px solid #f2f4f7;
     background-color: #f2f4f7;
 
+    :focus,
     :hover {
       font-weight: 700;
       background-color: #fff;
