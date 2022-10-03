@@ -3,17 +3,16 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 const CareerCard = (props) => {
-  const careerContentData = [여기다가 props로 전송해줄 더미데이터 넣을거임];
-
   return (
-    <CareerContentCard>
+    <CareerContentCard to="/">
       <div className="CareerContentCard-Thumnail">
-        <img src={props.thumNail} alt={props.thumNailAlt} />
+        <img src={props.data.thumNail} alt={props.data.title} />
       </div>
-      <p className="CareerContentCard-Title">{props.title}</p>
+      <p className="CareerContentCard-Title">{props.data.title}</p>
+      <p className="CareerContentCard-Desc">{props.data.desc}</p>
       <div className="CareerContentCard-Info">
-        <img src={props.infoIcon} alt={props.infoIconAlt} />
-        <p>{props.info}</p>
+        <img src={props.data.infoIcon} alt={props.data.infoIconAlt} />
+        <p>{props.data.info}</p>
       </div>
     </CareerContentCard>
   );
@@ -21,19 +20,38 @@ const CareerCard = (props) => {
 
 const CareerContentCard = styled(Link)`
   .CareerContentCard-Thumnail {
+    position: relative;
     padding-bottom: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .CareerContentCard-Thumnail img {
-    object-fit: contain;
-    background-color: #000;
-    object-position: center;
+    position: absolute;
+    left: 0;
+    top: 0;
+    border-radius: 4px;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
-  .CareerContentCard-title {
-    font-weight: 700px;
+  .CareerContentCard-Title {
+    font-weight: 700;
     font-size: 16px;
     margin: 17px 0 8px;
+  }
+
+  .CareerContentCard-Desc {
+    margin-top: 6px;
+    font-weight: 600;
+    font-size: 13px;
+    color: #aaa;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
   }
 
   .CareerContentCard-Info {
