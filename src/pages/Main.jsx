@@ -5,20 +5,6 @@ import { useState } from "react";
 import DividerLine from "../components/DividerLine";
 import { NextArrowBtn, PrevArrowBtn } from "../components/ArrowBtns";
 
-const categorys = [
-  "리더십",
-  "커리어고민",
-  "취업/이직",
-  "조직문화",
-  "라이프스타일",
-  "인간관계",
-  "회사생활",
-  "IT/기술",
-  "마케팅",
-  "서비스기획",
-  "개발",
-];
-
 const main_topBanner_data = [
   {
     img: "imgs/mainTopBannerImgs/mainTopBannerImg1.webp",
@@ -40,7 +26,21 @@ const main_topBanner_data = [
   },
 ];
 
-const careerContentCard_data = [
+const categorys = [
+  "리더십",
+  "커리어고민",
+  "취업/이직",
+  "조직문화",
+  "라이프스타일",
+  "인간관계",
+  "회사생활",
+  "IT/기술",
+  "마케팅",
+  "서비스기획",
+  "개발",
+];
+
+const listData = [
   {
     subject: "리더십",
     thumNail:
@@ -106,6 +106,94 @@ const careerContentCard_data = [
       "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fstatic%2Ficon%2Fios%2Ficon120.png&w=60&q=90",
     infoIconAlt: "brunch",
     info: "그로플 백종화",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
+  },
+  {
+    subject: "리더십",
+    thumNail:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20201229%2F8%2F28666531.jpg&w=500&q=75",
+    title: "변화를 즐기는 팀을 만들어볼까요? - 김윤혁",
+    desc: "혼자서는 해낼 수 없는, 여러 명이 함께 그리고 한방향으로 움직여야지만 해결할 수 있는 미션이...",
+    infoIcon:
+      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Ffavicon%2F144x144.png&w=60&q=90",
+    infoIconAlt: "wanted",
+    info: "강남언니 김윤혁",
   },
   {
     subject: "리더십",
@@ -280,21 +368,21 @@ const Main = () => {
     prevArrow: <PrevArrowBtn />,
   };
 
-  const [career, setCareer] = useState("리더십");
+  const [showListData, setShowListData] = useState([]);
 
-  let nowCategory = 1;
+  let nowCategory = 0;
 
   function onClickCategoryBtn(event) {
-    if (nowCategory < 8 && event.target.className === "next-arrow") {
+    if (nowCategory < 6 && event.target.className === "next-arrow") {
+      nowCategory++;
       document.querySelector(
         ".category-container"
       ).style.transform = `translateX(-${nowCategory}00px)`;
-      nowCategory++;
-    } else if (nowCategory > 1 && event.target.className === "prev-arrow") {
+    } else if (nowCategory > 0 && event.target.className === "prev-arrow") {
       nowCategory--;
       document.querySelector(
         ".category-container"
-      ).style.transform = `translateX(-${nowCategory - 1}00px)`;
+      ).style.transform = `translateX(-${nowCategory}00px)`;
     }
   }
 
@@ -315,15 +403,20 @@ const Main = () => {
         <h2>나에게 필요한 커리어 인사이트</h2>
         <div className="category">
           <div className="category-container">
-            {categorys.map((data) => {
+            {categorys.map((category) => {
               return (
                 <button
                   type="button"
                   onClick={() => {
-                    setCareer(data);
+                    let tempList = listData
+                      .filter((data) => {
+                        return data.subject === category;
+                      })
+                      .splice(0, 8);
+                    setShowListData([...tempList]);
                   }}
                 >
-                  {data}
+                  {category}
                 </button>
               );
             })}
@@ -332,19 +425,37 @@ const Main = () => {
           <NextArrowBtn onClick={onClickCategoryBtn} />
         </div>
         <ul className="careerContent-list">
-          {careerContentCard_data
-            .filter((data) => {
-              return data.subject === career;
-            })
-            .map((data) => {
-              return (
-                <li>
-                  <CareerCard data={data} />
-                </li>
-              );
-            })}
+          {showListData.map((data) => {
+            return (
+              <li>
+                <CareerCard data={data} />
+              </li>
+            );
+          })}
         </ul>
+        <div className="careerContent-list-more">
+          <button
+            type="button"
+            onClick={() => {
+              let tempList = listData
+                .filter((data) => {
+                  return data.subject === showListData[0].subject;
+                })
+                .splice(0, 16);
+              setShowListData([...tempList]);
+            }}
+          >
+            더 많은 콘텐츠 보기
+            <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 19 19">
+              <path
+                d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z"
+                fill="currentColor"
+              ></path>
+            </svg>
+          </button>
+        </div>
       </CareerContent>
+
       <CreatorBanner>
         <div className="creatorBanner-container">
           <div className="title">
@@ -496,11 +607,31 @@ const CareerContent = styled.section`
     display: flex;
     flex-wrap: wrap;
     clear: both;
+
+    li {
+      width: calc(25% - 20px);
+      margin: 0 10px 50px;
+    }
   }
 
-  .careerContent-list li {
-    width: calc(25% - 20px);
-    margin: 0 10px 50px;
+  .careerContent-list-more button {
+    width: 345px;
+    height: 50px;
+    font-weight: 700;
+    font-size: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    border: 1px solid #e1e2e3;
+    border-radius: 25px;
+
+    svg {
+      width: 17px;
+      height: 17px;
+      margin-left: 10px;
+      margin-bottom: 5px;
+    }
   }
 `;
 const CreatorBanner = styled.div`
