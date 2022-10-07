@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const JobCard = (props) => {
   return (
-    <PositionLink to="/" backgroundImg={props.imgSrc}>
+    <Card to="/" backgroundImg={props.imgSrc}>
       <div className="job-card__header"></div>
       <div className="job-card__body">
         <h3 className="job-card-position">{props.position}</h3>
@@ -11,11 +11,11 @@ const JobCard = (props) => {
         <p className="job-card-company-location">{props.location}</p>
         <p className="job-card-reward">채용보상금 {props.reward}원</p>
       </div>
-    </PositionLink>
+    </Card>
   );
 };
 
-const PositionLink = styled(Link)`
+const Card = styled(Link)`
   .job-card__header {
     padding-bottom: 75%;ß
     position: relative;

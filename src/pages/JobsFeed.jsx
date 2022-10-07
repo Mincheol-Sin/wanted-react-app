@@ -5,7 +5,13 @@ import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
 import DividerLine from "../components/DividerLine";
-import JobCard from "../components/JobCard";
+import JobCard from "../components/common/card/JobCard";
+import {
+  PrevArrowBtn,
+  NextArrowBtn,
+} from "../components/common/button/ArrowBtns";
+
+import FollowBtn from "../components/common/button/FollowBtn";
 
 const JobsFeed = () => {
   const topbanner_settings = {
@@ -14,31 +20,9 @@ const JobsFeed = () => {
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <SampleNextArrow />,
-    prevArrow: <SamplePrevArrow />,
+    nextArrow: <NextArrowBtn />,
+    prevArrow: <PrevArrowBtn />,
   };
-
-  function SampleNextArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "red" }}
-        onClick={onClick}
-      />
-    );
-  }
-
-  function SamplePrevArrow(props) {
-    const { className, style, onClick } = props;
-    return (
-      <div
-        className={className}
-        style={{ ...style, display: "block", background: "green" }}
-        onClick={onClick}
-      />
-    );
-  }
 
   const jobFeed_topBanner_data = [
     {
@@ -394,7 +378,7 @@ const JobsFeed = () => {
                           <p>{data.industry}</p>
                         </div>
                       </div>
-                      <button type="button">팔로우</button>
+                      <FollowBtn />
                     </div>
                   </Link>
                 );
@@ -439,7 +423,7 @@ const JobsFeed = () => {
                           <p>{data.industry}</p>
                         </div>
                       </div>
-                      <button type="button">팔로우</button>
+                      <FollowBtn />
                     </div>
                   </Link>
                 );
@@ -525,6 +509,21 @@ const TopBanner = styled.div`
 
   .slick-arrow {
     z-index: 999;
+  }
+
+  .prev-arrow,
+  .next-arrow {
+    position: absolute;
+    z-index: 100;
+    top: 40%;
+  }
+
+  .prev-arrow {
+    left: -5%;
+  }
+
+  .next-arrow {
+    right: -5%;
   }
 `;
 const LineBanner = styled.div`

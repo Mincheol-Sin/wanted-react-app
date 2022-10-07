@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 const CareerCard = (props) => {
   return (
-    <CareerContentCard to="/">
+    <Card to="/">
       <div className="CareerContentCard-Thumnail">
         <img src={props.data.thumNail} alt={props.data.title} />
       </div>
@@ -14,11 +14,11 @@ const CareerCard = (props) => {
         <img src={props.data.infoIcon} alt={props.data.infoIconAlt} />
         <p>{props.data.info}</p>
       </div>
-    </CareerContentCard>
+    </Card>
   );
 };
 
-const CareerContentCard = styled(Link)`
+const Card = styled(Link)`
   .CareerContentCard-Thumnail {
     position: relative;
     padding-bottom: 70%;
