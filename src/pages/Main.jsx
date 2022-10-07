@@ -1,7 +1,8 @@
 import TopBanner from "../components/Main/TopBanner";
 import CareerContent from "../components/Main/CareerContent";
 import CreatorBanner from "../components/Main/CreatorBanner";
-import DividerLine from "../components/DividerLine";
+import DividerLine from "../components/common/DividerLine";
+import WantedPlusArticle from "../components/Main/WantedPlusArticle";
 
 const Main = () => {
   return (
@@ -11,6 +12,8 @@ const Main = () => {
       <CreatorBanner />
 
       <DividerLine />
+
+      <WantedPlusArticle />
     </>
   );
 };

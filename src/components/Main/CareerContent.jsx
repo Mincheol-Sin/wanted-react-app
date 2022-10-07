@@ -459,13 +459,11 @@ const Section = styled.section`
     }
 
     .prev-arrow {
-      position: absolute;
       top: 0;
       left: 0;
     }
 
     .next-arrow {
-      position: absolute;
       top: 0;
       right: 0;
     }

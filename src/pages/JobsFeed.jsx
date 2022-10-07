@@ -4,7 +4,7 @@ import "slick-carousel/slick/slick-theme.css";
 import { Link } from "react-router-dom";
 import { IoSearchOutline } from "react-icons/io5";
 import styled from "styled-components";
-import DividerLine from "../components/DividerLine";
+import DividerLine from "../components/common/DividerLine";
 import JobCard from "../components/common/card/JobCard";
 import {
   PrevArrowBtn,

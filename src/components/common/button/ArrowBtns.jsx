@@ -43,6 +43,7 @@ const Button = styled.button`
   border-radius: 50%;
   z-index: 99;
   background-color: #fff;
+  position: absolute;
 
   svg {
     width: 1em;
