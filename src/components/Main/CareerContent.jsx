@@ -339,13 +339,16 @@ const CareerContent = () => {
 
   let nowCategory = 0;
 
-  function lalala(event) {
-    if (nowCategory < 6 && event.target.className === "next-arrow") {
+  function onClickArrowBtn(event) {
+    if (nowCategory < 6 && event.target.classList.contains("next-arrow")) {
       nowCategory++;
       document.querySelector(
         ".category-slider"
       ).style.transform = `translateX(-${nowCategory}00px)`;
-    } else if (nowCategory > 0 && event.target.className === "prev-arrow") {
+    } else if (
+      nowCategory > 0 &&
+      event.target.classList.contains("prev-arrow")
+    ) {
       nowCategory--;
       document.querySelector(
         ".category-slider"
@@ -376,8 +379,8 @@ const CareerContent = () => {
             );
           })}
         </div>
-        <PrevArrowBtn onClick={lalala} />
-        <NextArrowBtn onClick={lalala} />
+        <PrevArrowBtn onClick={onClickArrowBtn} />
+        <NextArrowBtn onClick={onClickArrowBtn} />
       </div>
       <ul className="careerContent-list">
         {showListData.map((data) => {

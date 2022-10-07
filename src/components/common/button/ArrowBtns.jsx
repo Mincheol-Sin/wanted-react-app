@@ -20,6 +20,18 @@ export const NextArrowBtn = (props) => {
   );
 };
 
+export const TopBanner_prevArrow = () => {
+  return (
+    <TopBannerBtn type="button">
+      <span>
+        <svg class="SvgIcon_SvgIcon__root__svg__DKYBi" viewBox="0 0 18 18">
+          <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
+        </svg>
+      </span>
+    </TopBannerBtn>
+  );
+};
+
 const Button = styled.button`
   display: flex;
   justify-content: center;
@@ -30,10 +42,25 @@ const Button = styled.button`
   border: 1px solid #e1e2e3;
   border-radius: 50%;
   z-index: 99;
+  background-color: #fff;
 
   svg {
     width: 1em;
     height: 1em;
     color: #767676;
   }
+`;
+
+const TopBannerBtn = styled.button`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  width: 30px;
+  height: 60px;
+  opacity: 0.5;
+  border-radius: 15px;
+  background-color: #fff;
+  font-size: 16px;
+  z-index: 10;
 `;
