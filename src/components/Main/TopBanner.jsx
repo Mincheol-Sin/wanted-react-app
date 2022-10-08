@@ -1,6 +1,9 @@
 import Slider from "react-slick";
 import styled from "styled-components";
-import { NextArrowBtn, PrevArrowBtn } from "../common/button/ArrowBtns";
+import {
+  TopBannerNextArrow,
+  TopBannerPrevArrow,
+} from "../common/button/ArrowBtns";
 
 const topBanner_settings = {
   infinite: true,
@@ -8,8 +11,8 @@ const topBanner_settings = {
   autoplay: true,
   slidesToShow: 1,
   slidesToScroll: 1,
-  nextArrow: <NextArrowBtn />,
-  prevArrow: <PrevArrowBtn />,
+  nextArrow: <TopBannerNextArrow />,
+  prevArrow: <TopBannerPrevArrow />,
 };
 
 const main_topBanner_data = [
@@ -52,33 +55,14 @@ const StyledSlider = styled(Slider)`
   padding-top: 25px;
   margin: 50px auto 0 auto;
 
-  .prev-arrow,
-  .next-arrow {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    top: 40%;
-    width: 40px;
-    height: 40px;
-    font-size: 18px;
-    border: 1px solid #e1e2e3;
-    border-radius: 50%;
-    background-color: #fff;
-    z-index: 99;
-
-    svg {
-      width: 18px;
-      height: 18px;
-    }
-  }
-
   .prev-arrow {
-    left: -5%;
+    left: -6%;
+    top: 45%;
   }
 
   .next-arrow {
-    right: -5%;
+    right: -6%;
+    top: 45%;
   }
 
   .slick-list {

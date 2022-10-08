@@ -7,8 +7,8 @@ import styled from "styled-components";
 import DividerLine from "../components/common/DividerLine";
 import JobCard from "../components/common/card/JobCard";
 import {
-  PrevArrowBtn,
-  NextArrowBtn,
+  TopBannerNextArrow,
+  TopBannerPrevArrow,
 } from "../components/common/button/ArrowBtns";
 
 import FollowBtn from "../components/common/button/FollowBtn";
@@ -20,8 +20,8 @@ const JobsFeed = () => {
     autoplay: true,
     slidesToShow: 1,
     slidesToScroll: 1,
-    nextArrow: <NextArrowBtn />,
-    prevArrow: <PrevArrowBtn />,
+    nextArrow: <TopBannerNextArrow />,
+    prevArrow: <TopBannerPrevArrow />,
   };
 
   const jobFeed_topBanner_data = [

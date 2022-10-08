@@ -8,8 +8,10 @@ const ArticleCard = (props) => {
           <img src={props.thumbnail} alt={props.title} />
         </div>
         <div className="content">
-          <h4>{props.title}</h4>
-          <p>{props.category}</p>
+          <p className="author">{props.author}</p>
+          <h4 className="title">{props.title}</h4>
+          <p className="subTitle">{props.subTitle}</p>
+          <p className="category">{props.category}</p>
         </div>
       </a>
     </Card>
@@ -23,6 +25,7 @@ const Card = styled.li`
     position: relative;
     padding-bottom: 70%;
     padding-left: 0;
+    margin-bottom: 17px;
 
     img {
       position: absolute;
@@ -36,13 +39,30 @@ const Card = styled.li`
   }
 
   .content {  
-    h4 {
-    margin-top: 17px;
-    font-size: 16px;
-    font-weight: 700;
+
+    .author {
+      font-size: 14px;
+      font-weight: 600;
+      margin: 5px 0;
     }
 
-    p {
+    .title {
+    font-size: 16px;
+    font-weight: 700;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    }
+
+    .subTitle {
+      font-size: 13px;
+      margin-top: 8px;
+      font-weight: 600;
+      color: #aaa;
+    }
+
+    .category {
       font-size: 12px;
       font-weight: 500;
       margin-top: 13px;
