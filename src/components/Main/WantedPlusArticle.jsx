@@ -75,34 +75,33 @@ const WantedPlusList_settings = {
 const WantedPlusArticle = () => {
   return (
     <Section>
-      <div className="BannerHeader">
-        <h2 className="title">3분만에 읽는 Wanted+ 아티클</h2>
-        <a href="/">아티클 전체보기 {">"}</a>
+      <div className="section-wrapper">
+        <div className="BannerHeader">
+          <h2 className="title">3분만에 읽는 Wanted+ 아티클</h2>
+          <a href="/">아티클 전체보기 {">"}</a>
+        </div>
+        <ul className="WantedPlusList">
+          <Slider {...WantedPlusList_settings}>
+            {wantedPlusArticleList.map((item) => {
+              return (
+                <li>
+                  <ArticleCard
+                    href={item.href}
+                    thumbnail={item.thumbnail}
+                    title={item.title}
+                    category={item.category}
+                  />
+                </li>
+              );
+            })}
+          </Slider>
+        </ul>
       </div>
-      <ul className="WantedPlusList">
-        <Slider {...WantedPlusList_settings}>
-          {wantedPlusArticleList.map((item) => {
-            return (
-              <ArticleCard
-                href={item.href}
-                thumbnail={item.thumbnail}
-                title={item.title}
-                category={item.category}
-              />
-            );
-          })}
-        </Slider>
-      </ul>
     </Section>
   );
 };
 
 const Section = styled.section`
-  padding: 60px 0;
-  width: 87.72%;
-  max-width: 1060px;
-  margin: 0 auto;
-
   .BannerHeader {
     text-align: center;
     margin-bottom: 20px;

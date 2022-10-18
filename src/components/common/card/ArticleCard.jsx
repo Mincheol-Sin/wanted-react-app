@@ -18,7 +18,7 @@ const ArticleCard = (props) => {
   );
 };
 
-const Card = styled.li`
+const Card = styled.div`
   padding 10px;
 
   .thumbnail {

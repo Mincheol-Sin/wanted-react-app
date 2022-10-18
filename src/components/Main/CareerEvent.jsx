@@ -1,5 +1,5 @@
 import React from "react";
-import SlideSectionWrapper from "../common/SlideSectionWrapper";
+import SlideSection from "../common/SlideSection";
 
 const CareerEvent = () => {
   let data = [
@@ -42,13 +42,13 @@ const CareerEvent = () => {
   ];
 
   return (
-    <>
-      <SlideSectionWrapper
-        title="커리어 성장을 위한 맞춤 이벤트"
-        subTitle="이벤트 전체보기"
-        data={data}
-      />
-    </>
+    <section>
+        <SlideSection
+          title="커리어 성장을 위한 맞춤 이벤트"
+          subTitle="이벤트 전체보기"
+          data={data}
+        />
+    </section>
   );
 };
 

@@ -2,8 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Slider from "react-slick";
 import { NextArrowBtn, PrevArrowBtn } from "./button/ArrowBtns";
-import { Link } from "react-router-dom";
-import ArticleCard from "../common/card/ArticleCard";
+import ArticleCard from "./card/ArticleCard";
 
 const SLIDER_SETTINGS_1 = {
   dots: false,
@@ -15,11 +14,11 @@ const SLIDER_SETTINGS_1 = {
   prevArrow: <PrevArrowBtn />,
 };
 
-const SlideSectionWrapper = (props) => {
+const SlideSection = (props) => {
   let data = props.data;
 
   return (
-    <Wrapper>
+    <Wrapper className="section-wrapper">
       <div className="banner-header">
         <h2 className="title">{props.title}</h2>
         <a href="/">
@@ -29,14 +28,12 @@ const SlideSectionWrapper = (props) => {
       <Slider {...SLIDER_SETTINGS_1}>
         {data.map((item) => {
           return (
-            <Link to="/">
-              <ArticleCard
-                version="2"
-                href={item.href}
-                thumbnail={item.thumbnail}
-                title={item.title}
-              />
-            </Link>
+            <ArticleCard
+              version="2"
+              href={item.href}
+              thumbnail={item.thumbnail}
+              title={item.title}
+            />
           );
         })}
       </Slider>
@@ -44,12 +41,7 @@ const SlideSectionWrapper = (props) => {
   );
 };
 
-const Wrapper = styled.section`
-  padding: 60px 0;
-  width: 90%;
-  max-width: 1060px;
-  margin: 0 auto;
-
+const Wrapper = styled.div`
   .banner-header {
     text-align: center;
     margin-bottom: 20px;
@@ -76,4 +68,4 @@ const Wrapper = styled.section`
   }
 `;
 
-export default SlideSectionWrapper;
+export default SlideSection;
