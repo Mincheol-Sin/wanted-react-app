@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 const ArticleCard = (props) => {
   return (
-    <Card>
+    <Card version={props.version}>
       <a href={props.href}>
         <div className="thumbnail">
           <img src={props.thumbnail} alt={props.title} />
@@ -23,7 +23,7 @@ const Card = styled.li`
 
   .thumbnail {
     position: relative;
-    padding-bottom: 70%;
+    padding-bottom: ${(props) => (props.version === "2" ? "52.3%" : "70%")};
     padding-left: 0;
     margin-bottom: 17px;
 
